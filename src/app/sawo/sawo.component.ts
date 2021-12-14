@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import Sawo from 'sawo';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-sawo',
@@ -21,7 +22,7 @@ export class SawoComponent implements OnInit {
       // can be one of 'email' or 'phone_number_sms'
       identifierType: 'email',
       // Add the API key
-      apiKey: 'f05a1042-61b4-4175-a692-98b3f1dd01e7',
+      apiKey: environment.apiKey,
       // Add a callback here to handle the payload sent by sdk
       onSuccess: (payload: any) => {
         console.log(`Payload: ${JSON.stringify(payload)}`);
